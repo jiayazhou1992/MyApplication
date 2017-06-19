@@ -1,0 +1,73 @@
+package com.sunztech.admin.general_app.ui.fragment;
+
+import android.content.Context;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.sunztech.admin.general_app.R;
+import com.sunztech.admin.general_app.base.BaseFragment;
+
+/**
+ * A simple {@link Fragment} subclass.
+ * Activities that contain this fragment must implement the
+ * to handle interaction events.
+ * Use the {@link ChildFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class ChildFragment extends BaseFragment {
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
+
+    public ChildFragment() {
+        // Required empty public constructor
+    }
+
+
+    // TODO: Rename and change types and number of parameters
+    public static ChildFragment newInstance(String param1, String param2) {
+        ChildFragment fragment = new ChildFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+    }
+
+
+    @Override
+    public View initView(LayoutInflater inflater, ViewGroup container) {
+        return inflater.inflate(R.layout.fragment_child, container, false);
+    }
+
+    @Override
+    protected void initFindViewById(View view) {
+
+    }
+
+    @Override
+    public void initData() {
+
+    }
+
+
+
+}
