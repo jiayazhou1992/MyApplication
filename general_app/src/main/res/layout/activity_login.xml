@@ -32,12 +32,13 @@
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
             android:background="@color/white">
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@mipmap/ic_launcher"
-                android:layout_gravity="center_horizontal"
-                android:backgroundTint="@color/colorPrimary"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="贾"
+                android:textSize="100sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center_horizontal" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -46,7 +47,8 @@
                     android:id="@+id/edit_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="姓名"/>
+                    android:hint="姓名"
+                    android:textSize="13sp"/>
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -56,7 +58,9 @@
                     android:id="@+id/edit_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="密码"/>
+                    android:inputType="textPassword"
+                    android:hint="密码"
+                    android:textSize="13sp"/>
             </android.support.design.widget.TextInputLayout>
 
 
@@ -67,7 +71,8 @@
                 android:text="ligon"
                 android:textStyle="bold"
                 android:textColor="@color/cardview_light_background"
-                android:background="@color/colorPrimary"/>
+                android:background="@drawable/rect_2oval_thme"
+                android:layout_marginTop="10dp"/>
 
             <TextView
                 android:id="@+id/textview_register"

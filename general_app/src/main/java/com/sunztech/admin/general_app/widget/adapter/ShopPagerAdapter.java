@@ -29,11 +29,9 @@ public class ShopPagerAdapter extends LoopPagerAdapter {
 
     @Override
     public View getView(ViewGroup container, int position) {
-        ImageView imageView=new ImageView(container.getContext());
-        imageView.setLayoutParams(new ViewGroup.LayoutParams(ScreenUtils.dpToPxInt(container.getContext(),100),ScreenUtils.dpToPxInt(container.getContext(),100)));
-        imageView.setBackgroundResource(R.color.colorPrimary);
-        imageView.setImageResource(imgs[position]);
-        return imageView;
+        View view=View.inflate(container.getContext(),R.layout.item_viewpager1,null);
+
+        return view;
     }
 
     @Override

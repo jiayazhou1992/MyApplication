@@ -6,4 +6,6 @@
     <color name="colorAccent">#FFFF3030</color>
 
     <color name="white">#FFFFFF</color>
+    <color name="gray1">#88aaaaaa</color>
+    <color name="gray2">#eeeeee</color>
 </resources>

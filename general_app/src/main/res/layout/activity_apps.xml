@@ -7,12 +7,14 @@
     android:fitsSystemWindows="true"
     app:statusBarBackground="@color/colorPrimary"
     android:id="@+id/apps_coordinatorlayout"
+    android:background="@color/colorPrimary"
     tools:context="com.sunztech.admin.general_app.ui.activity.AppsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/gray2">
         <FrameLayout
             android:id="@+id/fragment_content"
             android:layout_width="match_parent"
@@ -32,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 style="@style/radiobutton_style_1"
-                android:drawableTop="@mipmap/ic_launcher"
+                android:drawableTop="@drawable/oval_thme"
                 android:text="商品"/>
             <RadioButton
                 android:id="@+id/radio2"
@@ -40,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 style="@style/radiobutton_style_1"
-                android:drawableTop="@mipmap/ic_launcher"
+                android:drawableTop="@drawable/oval_thme"
                 android:text="消息"/>
             <RadioButton
                 android:id="@+id/radio3"
@@ -48,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 style="@style/radiobutton_style_1"
-                android:drawableTop="@mipmap/ic_launcher"
+                android:drawableTop="@drawable/oval_thme"
                 android:text="媒体"/>
             <RadioButton
                 android:id="@+id/radio4"
@@ -56,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 style="@style/radiobutton_style_1"
-                android:drawableTop="@mipmap/ic_launcher"
+                android:drawableTop="@drawable/oval_thme"
                 android:text="版本"/>
         </RadioGroup>
 
