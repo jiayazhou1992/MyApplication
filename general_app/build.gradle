@@ -45,7 +45,10 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.6.0'
     compile 'io.reactivex:rxjava:1.0.14'
     compile 'io.reactivex:rxandroid:1.0.1'
+
     compile 'com.jude:fitsystemwindowlayout:2.1.5'
+    compile 'com.jude:rollviewpager:1.4.6'
+
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:support-v4:24.2.1'
     testCompile 'junit:junit:4.12'
