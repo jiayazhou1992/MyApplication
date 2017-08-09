@@ -21,7 +21,9 @@
         <activity android:name=".ui.activity.HomeActivity" />
         <activity android:name=".ui.activity.ListActivity" />
         <activity android:name=".ui.activity.RecyclayerActivity" />
-        <activity android:name=".ui.activity.AppsActivity"></activity>
+        <activity android:name=".ui.activity.AppsActivity" />
+        <activity android:name=".ui.activity.TuoluoActivity" />
+        <activity android:name=".ui.activity.VideoActivity"></activity>
     </application>
 
 </manifest>

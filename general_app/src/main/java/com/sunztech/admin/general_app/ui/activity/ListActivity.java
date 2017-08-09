@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class ListActivity extends BaseActivity {
 
     private String[] actions={"RecyclerView+DiffUtil+CardView",
-            "Apps",};
+            "Apps","陀螺","视频播放"};
 
     private RecyclerView recyclerView;
     private CommonRecyclayerAdapter<String> recyclayerAdapter;
@@ -51,6 +51,9 @@ public class ListActivity extends BaseActivity {
                         break;
                     case 1:
                         startActivity(new Intent(ListActivity.this,AppsActivity.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(ListActivity.this,TuoluoActivity.class));
                         break;
                 }
 

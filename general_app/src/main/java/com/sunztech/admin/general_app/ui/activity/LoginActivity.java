@@ -53,8 +53,8 @@ public class LoginActivity extends BaseActivity implements LoginView{
             @Override
             public void onClick(View view) {
 
-                loginPresenter.login(editText_id.getText().toString(),editText_password.getText().toString());
-
+                //loginPresenter.login(editText_id.getText().toString(),editText_password.getText().toString());
+                showMessga("成功");
             }
         });
         textView_register.setOnClickListener(new View.OnClickListener() {
