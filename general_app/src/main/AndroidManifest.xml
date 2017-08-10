@@ -23,7 +23,8 @@
         <activity android:name=".ui.activity.RecyclayerActivity" />
         <activity android:name=".ui.activity.AppsActivity" />
         <activity android:name=".ui.activity.TuoluoActivity" />
-        <activity android:name=".ui.activity.VideoActivity"></activity>
+        <activity android:name=".ui.activity.VideoActivity" />
+        <activity android:name=".ui.activity.ScrollActivity"></activity>
     </application>
 
 </manifest>
