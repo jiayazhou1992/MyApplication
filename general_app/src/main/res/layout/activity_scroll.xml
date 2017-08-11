@@ -10,7 +10,17 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.sunztech.admin.general_app.widget.view.HorizontalListView
+                android:id="@+id/hlistview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+            </com.sunztech.admin.general_app.widget.view.HorizontalListView>
+        </LinearLayout>
     </ScrollView>
 
 </android.support.design.widget.CoordinatorLayout>

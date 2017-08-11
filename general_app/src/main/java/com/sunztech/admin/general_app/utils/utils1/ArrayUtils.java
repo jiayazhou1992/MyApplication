@@ -186,4 +186,12 @@ public class ArrayUtils {
             list.add(v);
         }
     }
+
+    public static <V> ArrayList<V> array2List(V[] array){
+        ArrayList<V> arrayList=new ArrayList<V>();
+        for (V v:array) {
+            arrayList.add(v);
+        }
+        return arrayList;
+    }
 }
