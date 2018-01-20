@@ -1,1 +1,1 @@
-include ':app', ':app2', ':service', ':myView', ':general_app', ':dang'
+include ':general_app', ':dang'

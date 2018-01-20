@@ -7,6 +7,7 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
+import android.widget.ViewAnimator;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

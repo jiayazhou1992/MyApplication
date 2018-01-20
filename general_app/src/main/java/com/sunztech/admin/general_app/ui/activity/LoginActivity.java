@@ -3,9 +3,13 @@ package com.sunztech.admin.general_app.ui.activity;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.FitWindowsLinearLayout;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.sunztech.admin.general_app.R;
@@ -14,6 +18,7 @@ import com.sunztech.admin.general_app.model.login.LoginModelImpl;
 import com.sunztech.admin.general_app.model.login.LoginView;
 import com.sunztech.admin.general_app.presenter.LoginPresenter;
 import com.sunztech.admin.general_app.utils.utils1.LogUtils;
+import com.sunztech.admin.general_app.utils.utils1.StatusBarUtil;
 
 
 public class LoginActivity extends BaseActivity implements LoginView{
@@ -22,10 +27,11 @@ public class LoginActivity extends BaseActivity implements LoginView{
     private TextView textView_register;
     private EditText editText_id,editText_password;
     private LoginPresenter loginPresenter;
-    private FitWindowsLinearLayout fitWindowsLinearLayout;
+    private LinearLayout fitWindowsLinearLayout;
 
     @Override
     protected int getContentView() {
+        //StatusBarUtil.setModel(StatusBarUtil.MODEL_1,this);
         return R.layout.activity_login;
     }
 
@@ -42,7 +48,7 @@ public class LoginActivity extends BaseActivity implements LoginView{
         textView_register= (TextView) findViewById(R.id.textview_register);
         editText_id= (EditText) findViewById(R.id.edit_id);
         editText_password= (EditText) findViewById(R.id.edit_password);
-        fitWindowsLinearLayout= (FitWindowsLinearLayout) findViewById(R.id.activity_main_FitSystemWindowsLinearLayout);
+        fitWindowsLinearLayout= (LinearLayout) findViewById(R.id.activity_main_FitSystemWindowsLinearLayout);
 
     }
 
@@ -75,8 +81,18 @@ public class LoginActivity extends BaseActivity implements LoginView{
     public void showMessga(String messga) {
         toast(messga);
         if (messga.equals("成功")){
-            Intent intent=new Intent(this,ListActivity.class);
-            startActivity(intent);
+            /*Intent intent=new Intent(this,ListActivity.class);
+            startActivity(intent);*/
+            /*LoginActivity.this.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            LoginActivity.this.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            LoginActivity.this.getWindow().setStatusBarColor(getResources().getColor(R.color.colorAccent));
+            ViewGroup rootView = (ViewGroup) ((ViewGroup) LoginActivity.this.findViewById(android.R.id.content)).getChildAt(0);
+            if (rootView != null) {//有的时候会拿不到页面的根布局
+                Log.i("ccc","--------------------");
+                rootView.setFitsSystemWindows(false);
+                //rootView.setClipToPadding(true);
+            }*/
+            StatusBarUtil.setTransparent(this,true);
         }
     }
 }

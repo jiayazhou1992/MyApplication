@@ -8,10 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="radiobutton_style_1" >
+    <style name="radiobutton_style_1">
         <item name="android:button">@null</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textSize">13sp</item>
     </style>
+
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
