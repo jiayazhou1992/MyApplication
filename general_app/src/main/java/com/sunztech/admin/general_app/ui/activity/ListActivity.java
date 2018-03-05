@@ -16,6 +16,7 @@ import java.util.Arrays;
 public class ListActivity extends BaseActivity {
 
     private String[] actions={"RecyclerView+DiffUtil+CardView",
+            "Apps","陀螺","视频播放","BLUETOOTH","Mosaic"};
             "Apps","陀螺","视频播放","事件分发"};
 
     private RecyclerView recyclerView;
@@ -55,8 +56,15 @@ public class ListActivity extends BaseActivity {
                     case 2:
                         startActivity(new Intent(ListActivity.this,TuoluoActivity.class));
                         break;
+                    case 3:
+                        startActivity(new Intent(ListActivity.this,VideoActivity.class));
+                        break;
                     case 4:
-                        startActivity(new Intent(ListActivity.this,RouteActivity.class));
+                        startActivity(new Intent(ListActivity.this,BluetoothActivity.class));
+                        break;
+                    case 5:
+                        startActivity(new Intent(ListActivity.this,NFCActivity.class));
+                        break;
                 }
 
             }

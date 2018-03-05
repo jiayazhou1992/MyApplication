@@ -1,9 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.sunztech.admin.general_app.ui.activity.VideoActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+        <SurfaceView
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+        <SurfaceView
+            android:id="@+id/video2"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/bofang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="start"/>
+            <Button
+                android:id="@+id/stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="stop"/>
+            <Button
+                android:id="@+id/change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="change"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

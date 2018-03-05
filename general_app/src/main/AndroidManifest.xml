@@ -3,6 +3,11 @@
     package="com.sunztech.admin.general_app">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -25,10 +30,8 @@
         <activity android:name=".ui.activity.TuoluoActivity" />
         <activity android:name=".ui.activity.VideoActivity" />
         <activity android:name=".ui.activity.ScrollActivity" />
-        <activity
-            android:name=".ui.activity.RouteActivity"
-            android:label="@string/title_activity_route"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".ui.activity.NFCActivity" />
+        <activity android:name=".ui.activity.BluetoothActivity"></activity>
     </application>
 
 </manifest>
