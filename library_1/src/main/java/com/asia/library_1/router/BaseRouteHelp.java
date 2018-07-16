@@ -6,9 +6,9 @@ import com.asia.library_1.base.BaseFragment;
  * Created by Administrator on 2018/2/27 0027.
  */
 
-public class RouteHelp {
+public class BaseRouteHelp {
 
-    public static BaseFragment getFragment(int fragmentId){
+    public BaseFragment getFragment(int fragmentId){
         BaseFragment fragment = null;
         switch (fragmentId){
 

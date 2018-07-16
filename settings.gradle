@@ -1,1 +1,1 @@
-include ':app', ':service', ':myView', ':general_app', ':dang', ':restart', ':wanandroid', ':library_1'
+include ':general_app', ':dang', ':wanandroid', ':library_1', ':cuner'

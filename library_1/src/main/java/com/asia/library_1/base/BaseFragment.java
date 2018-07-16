@@ -2,6 +2,7 @@ package com.asia.library_1.base;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +14,8 @@ import android.view.ViewGroup;
 
 public abstract class BaseFragment extends Fragment {
 
-    public BaseActivity mActivity;
+    protected BaseActivity mActivity;
+    protected View rootView;
 
     /**
      * 此方法可以得到上下文对象
@@ -23,20 +25,14 @@ public abstract class BaseFragment extends Fragment {
         super.onAttach(context);
         mActivity = (BaseActivity) getActivity();
     }
-
-
     /**
      * 返回一个需要展示的View
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-
-        View view = initView(inflater, container);
-        initFindViewById(view);
-
-        return view;
+        rootView = inflater.inflate(getContentId(), container,false);
+        return rootView;
     }
-
     /**
      * 当Activity初始化之后可以在这里进行一些数据的初始化操作
      */
@@ -44,34 +40,24 @@ public abstract class BaseFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         initData();
-        initEvent();
+        initToolBar();
+        initView();
+        setView();
+        setdata();
     }
 
-    /**
-     * 子类可以复写此方法初始化事件
-     */
-    protected void initEvent() {
+    //protected abstract void preSetp();
+    protected abstract int getContentId();
+    protected abstract void initData();
+    protected abstract void initToolBar();
+    protected abstract void initView();
+    protected abstract void setView();
+    protected abstract void setdata();
 
+    //find view
+    public View findView(View view, @IdRes int viewId){
+        return view.findViewById(viewId);
     }
-
-
-    /**
-     * 子类实现此抽象方法返回View进行展示
-     *
-     * @return
-     */
-    public abstract View initView(LayoutInflater inflater,ViewGroup container);
-
-    /**
-     * 初始化控件
-     */
-    protected abstract void initFindViewById(View view);
-
-    /**
-     * 子类在此方法中实现数据的初始化
-     */
-    public abstract void initData();
-
     /*
     * 获取宿主Activity
     */
@@ -79,4 +65,28 @@ public abstract class BaseFragment extends Fragment {
         return mActivity;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+    }
 }
